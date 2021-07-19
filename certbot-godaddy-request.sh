@@ -16,7 +16,6 @@ certbot certonly \
         --agree-tos \
         --manual-public-ip-logging-ok \
         --register-unsafely-without-email \
-        --preferred-challenges dns \
         --server https://acme-v02.api.letsencrypt.org/directory \
         --key-type ecdsa \
         --preferred-challenges dns \
