@@ -15,7 +15,9 @@ certbot renew \
         --non-interactive \
         --agree-tos \
         --manual-public-ip-logging-ok \
-        -m $EMAIL \
+        --register-unsafely-without-email \
+        --server https://acme-v02.api.letsencrypt.org/directory \
+        --key-type ecdsa \
         --preferred-challenges dns \
         --manual \
         --manual-auth-hook $SCRIPTDIR/certbot-godaddy-auth.sh \
