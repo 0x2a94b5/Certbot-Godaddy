@@ -15,7 +15,10 @@ certbot certonly \
         --non-interactive \
         --agree-tos \
         --manual-public-ip-logging-ok \
-        -m "$EMAIL" \
+        --register-unsafely-without-email \
+        --preferred-challenges dns \
+        --server https://acme-v02.api.letsencrypt.org/directory \
+        --key-type ecdsa \
         --preferred-challenges dns \
         --manual \
         --manual-auth-hook $SCRIPTDIR/certbot-godaddy-auth.sh \
